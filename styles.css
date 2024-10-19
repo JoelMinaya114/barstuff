@@ -119,6 +119,10 @@ input[type="range"]::-moz-range-thumb {
     padding: 10px;
     border: 2px solid #007BFF;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
 
 
 /* Make the box a square */
