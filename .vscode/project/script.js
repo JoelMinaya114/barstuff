@@ -16,23 +16,23 @@ const boxBeauty = document.getElementById('box-beauty');
 const boxSport = document.getElementById('box-sport');
 
 boxCar.addEventListener('click', function() {
-    alert('You clicked on CAR');
     //Add any functionality here for when CAR is clicked
+    window.location.href = 'car.html';
 });
 
 boxTravel.addEventListener('click', function() {
-    alert('You clicked on TRAVEL');
     // Add any functionality here for when TRAVEL is clicked
+    window.location.href = 'travel.html';
 });
 
 boxBeauty.addEventListener('click', function() {
-    alert('You clicked on BEAUTY');
     // Add any functionality here for when BEAUTY is clicked
+    window.location.href = 'beauty.html';
 });
 
 boxSport.addEventListener('click', function() {
-    alert('You clicked on SPORT');
     // Add any functionality here for when SPORT is clicked
+    window.location.href = 'sport.html';
 });
 
 
