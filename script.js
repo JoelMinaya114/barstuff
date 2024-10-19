@@ -1,5 +1,6 @@
 const slider = document.getElementById('letterSlider');
 const wordDisplay = document.getElementById('word-display');
+const travelContent = document.getElementById('travel-content');
 
 // Option boxes for each letter
 const optionA = document.getElementById('option-A');
@@ -12,6 +13,7 @@ function showOption(value) {
     optionA.style.display = 'none';
     optionTBoxes.style.display = 'none';
     optionZ.style.display = 'none';
+    travelContent.style.display = 'none';
 
     // Show the correct option based on slider value
     if (value == 0) {
@@ -35,8 +37,37 @@ slider.addEventListener('input', function() {
     showOption(letterIndex);
 });
 
-const boxCar = document.getElementById('box-car');
+// Get the Travel box
 const boxTravel = document.getElementById('box-travel');
+
+// Travel button functionality
+boxTravel.addEventListener('click', function() {
+    // Hide initial slider and options
+    document.getElementById('initial-slider').style.display = 'none';
+    optionA.style.display = 'none';
+    optionTBoxes.style.display = 'none';
+    optionZ.style.display = 'none';
+
+    //Show the Travel-specific content
+    travelContent.style.display = 'block';
+})
+
+// Event listener for the Travel slider
+const travelSlider = document.getElementById('travelSlider');
+travelSlider.addEventListener('input', function() {
+    const travelIndex = this.value;
+
+    // Word change on top
+    if (travelIndex == 0) {
+        document.getElementById('travel-display').innerText = 'Hotels';
+    } else if (travelIndex == 1) {
+        document.getElementById('travel-display').innerText = 'Hotels';
+    } else if (travelIndex == 2) {
+        document.getElementById('travel-display').innerText = 'Restaurants';
+    }
+});
+
+const boxCar = document.getElementById('box-car');
 const boxBeauty = document.getElementById('box-beauty');
 const boxSport = document.getElementById('box-sport');
 
