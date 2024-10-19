@@ -1,6 +1,12 @@
-/* styles.css */
+/* Styling for the word above the slider */
+.word-display {
+    font-size: 36px; /* Bigger font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; /* Space between the word and the slider */
+}
 
-/* Parent container to align both slider and letters */
+/* Adjust the slider wrapper for better positioning */
 .slider-wrapper {
     position: relative;
     width: 300px; /* Adjust the width as needed */
@@ -24,7 +30,6 @@ input[type="range"] {
     background: #ddd;
     outline: none;
     border-radius: 5px;
-    position: relative;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -45,37 +50,7 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
 }
 
-/* Markers for A, T, Z positions */
-.slider-container::before,
-.slider-container::after,
-.slider-container .middle::before {
-    content: '';
-    position: absolute;
-    top: 12px; /* Adjust to align with the slider */
-    height: 25px;
-    width: 2px;
-    background: black;
-}
-
-/* Marker for A */
-.slider-container::before {
-    left: 0%;
-    transform: translateX(0%);
-}
-
-/* Marker for Z */
-.slider-container::after {
-    left: 100%;
-    transform: translateX(-100%);
-}
-
-/* Marker for T */
-.slider-container .middle::before {
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-/* Letters container */
+/* Positioning the letters A, T, Z below the slider */
 .letters {
     position: absolute;
     top: 70px; /* Adjust to position letters below the slider */
@@ -84,26 +59,22 @@ input[type="range"]::-moz-range-thumb {
     text-align: center;
 }
 
-/* Individual letters styling */
 .letters span {
     font-size: 18px;
     font-weight: bold;
     position: absolute;
 }
 
-/* Align A under its marker */
 .letters span:first-child {
     left: 0%;
     transform: translateX(0%);
 }
 
-/* Align T under its marker */
 .letters span:nth-child(2) {
     left: 50%;
     transform: translateX(-50%);
 }
 
-/* Align Z under its marker */
 .letters span:last-child {
     left: 100%;
     transform: translateX(-100%);
@@ -111,7 +82,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* Style for the option boxes */
 .option-box {
-    display: none;
+    display: none; /* Hide all options by default */
     font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
@@ -127,15 +98,7 @@ input[type="range"]::-moz-range-thumb {
     cursor: pointer;
 }
 
-
-#option-T-boxes {
-    display: none;
-    display: flex;
-    justify-content: center;
-    margin-top: 20px; /* Move the boxes down a bit */
-    gap: 10px; /* Reduced gap between the boxes */
-}
-
+/* Flex container for the option boxes */
 .options {
     display: flex;
     justify-content: center;
