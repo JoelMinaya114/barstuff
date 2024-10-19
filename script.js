@@ -27,12 +27,12 @@ function showOption(value) {
 }
 
 // Initial call to show the correct option when the page loads
-showWordAndOptions(slider.value);
+showOption(slider.value);
 
 // Event listener for slider input changes
 slider.addEventListener('input', function() {
     const letterIndex = this.value;
-    showWordAndOptions(letterIndex);
+    showOption(letterIndex);
 });
 
 const boxCar = document.getElementById('box-car');
