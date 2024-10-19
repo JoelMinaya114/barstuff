@@ -53,7 +53,7 @@ input[type="range"]::-moz-range-thumb {
 /* Positioning the letters A, T, Z below the slider */
 .letters {
     position: absolute;
-    top: 70px; /* Adjust to position letters below the slider */
+    top: 85px; /* Adjust to position letters below the slider */
     left: 0;
     width: 100%;
     text-align: center;
