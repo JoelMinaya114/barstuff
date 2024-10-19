@@ -48,16 +48,19 @@ input[type="range"]::-moz-range-thumb {
     background: black;
 }
 
+/* Marker for 'A' (left side) */
 .slider-container::before {
-    left: 0; /* Marker for A */
+    left: 0;
 }
 
+/* Marker for 'Z' (right side) */
 .slider-container::after {
-    right: 0; /* Marker for Z */
+    right: 0;
 }
 
+/* Marker for 'T' (center of slider) */
 .slider-container .middle::before {
-    left: 50%; /* Marker for T */
+    left: 50%; /* Center marker */
     transform: translateX(-50%);
 }
 
@@ -72,4 +75,19 @@ input[type="range"]::-moz-range-thumb {
 .letters span {
     font-size: 18px;
     font-weight: bold;
+    position: absolute;
+    bottom: -25px; /* Move the letters up */
+}
+
+.letters span:first-child {
+    left: 0; /* Position 'A' under the first marker */
+}
+
+.letters span:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%); /* Position 'T' under the center marker */
+}
+
+.letters span:last-child {
+    right: 0; /* Position 'Z' under the last marker */
 }
