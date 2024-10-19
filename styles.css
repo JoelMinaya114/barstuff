@@ -112,18 +112,22 @@ input[type="range"]::-moz-range-thumb {
 /* Style for the option boxes */
 .option-box {
     display: none; /* Hide all options by default */
-    font-size: 20px;
+    font-size: 16px;
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
     padding: 10px;
     border: 2px solid #007BFF;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+
 
 
 /* Make the box a square */
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
