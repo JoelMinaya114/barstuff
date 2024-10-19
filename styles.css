@@ -112,7 +112,7 @@ input[type="range"]::-moz-range-thumb {
 /* Style for the option boxes */
 .option-box {
     display: none; /* Hide all options by default */
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
     text-align: center;
@@ -121,7 +121,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    margin: 10px;
+    margin: 0 10px;
 
 
 
@@ -131,9 +131,15 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 auto; /* Center for box */
 }
 
+#option-T-boxes {
+    display: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Move the boxes down a bit */
+    gap: 10px; /* Reduced gap between the boxes */
+}
 
 #beauty-options {
     display: none; /* Hide dropdown for beauty options initially */
