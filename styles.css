@@ -57,7 +57,19 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .slider-container .middle::before {
-    left: 50%; /* Marker for T (middle of slider) */
+    left: 50%; /* Marker for T */
     transform: translateX(-50%);
 }
 
+/* Style for the letters below the slider */
+.letters {
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.letters span {
+    font-size: 18px;
+    font-weight: bold;
+}
