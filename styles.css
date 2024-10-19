@@ -140,3 +140,9 @@ input[type="range"]::-moz-range-thumb {
     margin-top: 20px; /* Move the boxes down a bit */
     gap: 10px; /* Reduced gap between the boxes */
 }
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}

@@ -8,12 +8,19 @@ const optionA = document.getElementById('option-A');
 const optionTBoxes = document.getElementById('option-T-boxes');
 const optionZ = document.getElementById('option-Z');
 const beautyOptions = document.getElementById('beauty-options');
+const defaultOptions = document.getElementById('default-options');
 
 // Add event listeners to each T box
 const boxCar = document.getElementById('box-car');
 const boxTravel = document.getElementById('box-travel');
 const boxBeauty = document.getElementById('box-beauty');
 const boxSport = document.getElementById('box-sport');
+
+const boxSalons = document.getElementById('box-salons');
+const boxBarbershops = document.getElementById('box-barbershops');
+const boxLashes = document.getElementById('box-lashes');
+const boxSpa = document.getElementById('box-spa');
+const backButton = document.getElementById('back-button');
 
 boxCar.addEventListener('click', function() {
     //Add any functionality here for when CAR is clicked
@@ -51,7 +58,7 @@ function showOption(value) {
         optionTBoxes.style.display = 'flex';
     } else if (value == 2) {
         optionZ.style.display = 'block';
-        beautyOptions.style.display = 'block'; // Show the beauty options dropdown for "B"
+        beautyOptions.style.display = 'flex'; // Show the beauty options dropdown for "B"
     }
 }
 

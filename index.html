@@ -25,7 +25,7 @@
     </div>
 
     <!-- Boxes for A -->
-    <div class="options">
+    <div class="options" id="option-A-boxes">
         <div id="option-A" class="option-box">Adventure</div>
     </div>
 
@@ -42,12 +42,13 @@
         <div id="option-Z" class="option-box">Zen</div>
      </div>
 
-    <!-- Dropdown for Beauty options -->
-    <div class="beauty-selection">
-        <select id="beauty-options">
-            <option value="beauty">Beauty</option>
-            <option value="business">Business</option>
-        </select>
+    <!-- Boxes for Beauty (hidden initially) -->
+    <div class="options" id="beauty-options-boxes" style="display: none;">
+        <div id="box-salons" class="option-box">SALONS</div>
+        <div id="box-barbershops" class="option-box">BARBERSHOPS</div>
+        <div id="box-lashes" class="option-box">LASHES</div>
+        <div id="box-spa" class="option-box">SPA</div>
+        <div id="back-button" class="option-box">BACK</div> <!-- Back button to return to default boxes -->
     </div>
 <!-- Link to external JS file -->
     <script src="script.js"></script>
