@@ -111,6 +111,7 @@ input[type="range"]::-moz-range-thumb {
 
 /* Style for the option boxes */
 .option-box {
+    display: none;
     font-size: 14px;
     font-weight: bold;
     margin-top: 20px;
