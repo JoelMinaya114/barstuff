@@ -119,7 +119,17 @@ input[type="range"]::-moz-range-thumb {
     padding: 10px;
     border: 2px solid #007BFF;
     border-radius: 5px;
+
+
+/* Make the box a square */
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto; /* Center for box */
 }
+
 
 #beauty-options {
     display: none; /* Hide dropdown for beauty options initially */
