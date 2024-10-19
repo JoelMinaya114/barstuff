@@ -45,10 +45,6 @@ boxCar.addEventListener('click', function() {
     window.location.href = 'car.html'; // Navigate to car.html
 });
 
-boxTravel.addEventListener('click', function() {
-    window.location.href = 'travel.html'; // Navigate to travel.html
-});
-
 boxBeauty.addEventListener('click', function() {
     window.location.href = 'beauty.html'; // Navigate to beauty.html
 });
