@@ -9,6 +9,33 @@ const optionTBoxes = document.getElementById('option-T-boxes');
 const optionZ = document.getElementById('option-Z');
 const beautyOptions = document.getElementById('beauty-options');
 
+// Add event listeners to each T box
+const boxCar = document.getElementById('box-car');
+const boxTravel = document.getElementById('box-travel');
+const boxBeauty = document.getElementById('box-beauty');
+const boxSport = document.getElementById('box-sport');
+
+boxCar.addEventListener('click', function() {
+    alert('You clicked on CAR');
+    //Add any functionality here for when CAR is clicked
+});
+
+boxTravel.addEventListener('click', function() {
+    alert('You clicked on TRAVEL');
+    // Add any functionality here for when TRAVEL is clicked
+});
+
+boxBeauty.addEventListener('click', function() {
+    alert('You clicked on BEAUTY');
+    // Add any functionality here for when BEAUTY is clicked
+});
+
+boxSport.addEventListener('click', function() {
+    alert('You clicked on SPORT');
+    // Add any functionality here for when SPORT is clicked
+});
+
+
 // Function to show the correct option box based on the slider value
 function showOption(value) {
     // Hide all options first
