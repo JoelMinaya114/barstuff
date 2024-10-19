@@ -1,8 +1,5 @@
 const slider = document.getElementById('letterSlider');
 
-// Array of letters A, T, and Z
-const letters = ['A', 'T', 'Z'];
-
 // Option boxes for each letter
 const optionA = document.getElementById('option-A');
 const optionTBoxes = document.getElementById('option-T-boxes');
@@ -15,16 +12,16 @@ function showOption(value) {
     optionA.style.display = 'none';
     optionTBoxes.style.display = 'none';
     optionZ.style.display = 'none';
-    beautyOptions.style.display = 'none'; // Hide beauty options initially
+    beautyOptions.style.display = 'none';
 
     // Show the correct option based on slider value
     if (value == 0) {
-        optionA.style.display = 'block';
+        optionA.style.display = 'flex'; // Show the Adventure option for A
     } else if (value == 1) {
-        optionTBoxes.style.display = 'flex';
+        optionTBoxes.style.display = 'flex'; // Show the T-related options (CAR, TRAVEL, etc.)
     } else if (value == 2) {
-        optionZ.style.display = 'block';
-        beautyOptions.style.display = 'block'; // Show the beauty options dropdown for "B"
+        optionZ.style.display = 'flex'; // Show Zen for Z
+        beautyOptions.style.display = 'flex'; // Show beauty-related options (SALONS, etc.)
     }
 }
 
@@ -34,10 +31,5 @@ showOption(slider.value);
 // Event listener for slider input changes
 slider.addEventListener('input', function() {
     const letterIndex = this.value;
-    
-    // Log the current letter for debugging or future use
-    console.log(letters[letterIndex]);
-
-    // Show the correct option based on the slider position
     showOption(letterIndex);
 });
