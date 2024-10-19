@@ -1,41 +1,3 @@
-/* styles.css */
-.slider-container {
-    position: relative;
-    width: 300px; /* Adjust the width of the slider */
-    margin: 50px auto;
-    text-align: center;
-}
-
-input[type="range"] {
-    width: 100%;
-    margin: 20px 0;
-    -webkit-appearance: none;
-    appearance: none;
-    height: 8px;
-    background: #ddd;
-    outline: none;
-    border-radius: 5px;
-    position: relative;
-}
-
-input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: #007BFF;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-input[type="range"]::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #007BFF;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
 /* Add markers for A, T, Z positions */
 .slider-container::before,
 .slider-container::after,
@@ -50,18 +12,20 @@ input[type="range"]::-moz-range-thumb {
 
 /* Marker for A (left side) */
 .slider-container::before {
-    left: 0; /* Marker for A on the far left */
+    left: 0%; /* Position marker at the far left */
+    transform: translateX(0%); /* No shift needed */
 }
 
 /* Marker for Z (right side) */
 .slider-container::after {
-    right: 0; /* Marker for Z on the far right */
+    left: 100%; /* Position marker at the far right */
+    transform: translateX(-100%); /* Shift marker left by its width */
 }
 
 /* Marker for T (center of slider) */
 .slider-container .middle::before {
-    left: 50%; /* Center marker for T */
-    transform: translateX(-50%);
+    left: 50%; /* Center marker */
+    transform: translateX(-50%); /* Center it perfectly */
 }
 
 /* Style for the letters below the slider */
@@ -80,17 +44,17 @@ input[type="range"]::-moz-range-thumb {
 /* Align A under the left marker */
 .letters span:first-child {
     left: 0%; /* Position A at the far left */
-    transform: translateX(10%); /* Shift A inward to align under the marker */
+    transform: translateX(0%); /* No shift needed */
 }
 
 /* Align T under the center marker */
 .letters span:nth-child(2) {
     left: 50%; /* Center T */
-    transform: translateX(-50%); /* Perfectly center it */
+    transform: translateX(-50%); /* Center it perfectly */
 }
 
 /* Align Z under the right marker */
 .letters span:last-child {
     left: 100%; /* Position Z at the far right */
-    transform: translateX(-110%); /* Shift Z inward to align under the marker */
+    transform: translateX(-100%); /* Shift Z left by its width */
 }
