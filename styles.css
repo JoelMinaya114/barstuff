@@ -1,7 +1,7 @@
 /* styles.css */
 .slider-container {
     position: relative;
-    width: 300px;
+    width: 300px; /* Adjust the width of the slider */
     margin: 50px auto;
     text-align: center;
 }
@@ -50,17 +50,17 @@ input[type="range"]::-moz-range-thumb {
 
 /* Marker for A (left side) */
 .slider-container::before {
-    left: 0; /* Corrected to 0% to place A marker at the left edge */
+    left: 0; /* Places the marker for A on the left edge */
 }
 
 /* Marker for Z (right side) */
 .slider-container::after {
-    right: 0; /* Corrected to 0% to place Z marker at the right edge */
+    right: 0; /* Places the marker for Z on the right edge */
 }
 
 /* Marker for T (center of slider) */
 .slider-container .middle::before {
-    left: 50%; /* Center marker */
+    left: 50%; /* Center marker for T */
     transform: translateX(-50%);
 }
 
@@ -74,13 +74,13 @@ input[type="range"]::-moz-range-thumb {
     font-size: 18px;
     font-weight: bold;
     position: absolute;
-    bottom: -25px; /* Move the letters up closer to the slider */
+    bottom: -25px; /* Moves the letters up closer to the slider */
 }
 
 /* Position A under the left marker */
 .letters span:first-child {
     left: 0%; /* Aligns 'A' under the left marker */
-    transform: translateX(0);
+    transform: translateX(20%); /* Adjust to move A under the marker */
 }
 
 /* Position T under the center marker */
@@ -92,5 +92,5 @@ input[type="range"]::-moz-range-thumb {
 /* Position Z under the right marker */
 .letters span:last-child {
     left: 100%; /* Aligns 'Z' under the right marker */
-    transform: translateX(-100%);
+    transform: translateX(-120%); /* Adjust to move Z under the marker */
 }
