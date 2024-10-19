@@ -126,8 +126,8 @@ input[type="range"]::-moz-range-thumb {
 
 
 /* Make the box a square */
-    width: 150px;
-    height: 150px;
+    width: 80px;
+    height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
