@@ -2,24 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slide to Letter</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-    <div class="slider-container">
-        <!-- The slider element (input range) -->
-        <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
-        <!-- Invisible marker at the middle for "T" -->
-        <span class="middle"></span>
-    </div>
+    <div class="slider-wrapper">
+        <div class="slider-container">
+            <!-- The slider element (input range) -->
+            <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
+            <!-- Invisible marker at the middle for "T" -->
+            <span class="middle"></span>
+        </div>
 
-    <!-- Letters placed below the slider, aligned with the markers -->
-    <div class="letters">
-        <span>A</span>
-        <span>T</span>
-        <span>Z</span>
+        <!-- Letters placed below the slider, aligned with the markers -->
+        <div class="letters">
+            <span>A</span>
+            <span>T</span>
+            <span>Z</span>
+        </div>
     </div>
 
     <script src="script.js"></script>
