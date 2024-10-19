@@ -3,7 +3,7 @@ const slider = document.getElementById('letterSlider');
 const selectedLetter = document.getElementById('selectedLetter');
 
 // Array of letters A-Z
-const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+const letters = ['A', 'T', 'Z'];
 
 // Update the displayed letter and redirect when the slider is moved
 slider.addEventListener('input', function() {
