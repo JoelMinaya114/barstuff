@@ -1,7 +1,7 @@
 /* styles.css */
 .slider-container {
     position: relative;
-    width: 300px;
+    width: 300px; /* The width of the slider */
     margin: 50px auto;
     text-align: center;
 }
@@ -76,18 +76,23 @@ input[type="range"]::-moz-range-thumb {
     font-size: 18px;
     font-weight: bold;
     position: absolute;
-    bottom: -25px; /* Move the letters up */
+    bottom: -25px; /* Move the letters up closer to the slider */
 }
 
+/* Position 'A' under the left marker */
 .letters span:first-child {
-    left: 0; /* Position 'A' under the first marker */
+    left: 5%;                /* Position 'A' under the left marker */
+    transform: translateX(0); /* No additional offset */
 }
 
+/* Position 'T' under the center marker */
 .letters span:nth-child(2) {
-    left: 50%;
-    transform: translateX(-50%); /* Position 'T' under the center marker */
+    left: 50%;                /* Position 'T' at the center */
+    transform: translateX(-50%); /* Center it perfectly by adjusting its own width */
 }
 
+/* Position 'Z' under the right marker */
 .letters span:last-child {
-    right: 0; /* Position 'Z' under the last marker */
+    left: 95%;               /* Position 'Z' under the right marker */
+    transform: translateX(-100%); /* Adjust to align 'Z' under the right marker */
 }
