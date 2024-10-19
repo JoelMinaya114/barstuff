@@ -121,9 +121,7 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 5px;
     justify-content: center;
     align-items: center;
-    margin: 0 10px;
-
-
+    margin: 10px;
 
 /* Make the box a square */
     width: 80px;
@@ -131,7 +129,9 @@ input[type="range"]::-moz-range-thumb {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer; 
 }
+
 
 #option-T-boxes {
     display: none;
