@@ -49,11 +49,11 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .slider-container::before {
-    left: 0; /* Marker for A */
+    left: 60; /* Marker for A */
 }
 
 .slider-container::after {
-    right: 0; /* Marker for Z */
+    right: 60; /* Marker for Z */
 }
 
 .slider-container .middle::before {
