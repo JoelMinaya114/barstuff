@@ -8,13 +8,17 @@
 </head>
 <body>
 
-<div id="word-display" class=""word-display>Adventure</div>
-    <!-- Slider and Letters -->
+<!-- Word Display above the slider -->
 <div class="slider-wrapper">
+    <div id="word-display" class="word-display">Adventure</div>
+
+    <!-- Slider and Letters -->
     <div class="slider-container">
         <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
         <span class="middle"></span>
     </div>
+    
+    <!-- The letters A, T, Z below the slider -->
     <div class="letters">
         <span>A</span>
         <span>T</span>
@@ -22,13 +26,12 @@
     </div>
 </div>
 
-    <!-- Boxes for A options (Adventure-related) -->
-<div id="option-A" class="options" style="display: none;">
-    <div id="box-explore" class="option-box">Explore</div>
+<!-- Option Boxes for A -->
+<div id="option-A" class="options" style="display: flex;">
     <div id="box-adventure" class="option-box">Adventure</div>
 </div>
 
-<!-- Boxes for T options (Travel-related) -->
+<!-- Option Boxes for T -->
 <div id="option-T-boxes" class="options" style="display: none;">
     <div id="box-car" class="option-box">CAR</div>
     <div id="box-travel" class="option-box">TRAVEL</div>
@@ -36,11 +39,11 @@
     <div id="box-sport" class="option-box">SPORT</div>
 </div>
 
-<!-- Boxes for Z options (Zen-related) -->
+<!-- Option Boxes for Z -->
 <div id="option-Z" class="options" style="display: none;">
-    <div id="box-relax" class="option-box">Relax</div>
-    <div id="box-wellness" class="option-box">Wellness</div>
+    <div id="box-zen" class="option-box">Zen</div>
 </div>
+
 
     <!-- Beauty-related options (SALONS, etc.) -->
     <div id="beauty-options" class="options" style="display: none;">

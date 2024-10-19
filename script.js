@@ -15,21 +15,24 @@ function showOption(value) {
 
     // Show the correct option based on slider value
     if (value == 0) {
-        optionA.style.display = 'Adventure'; // Show the Adventure option for A
+        wordDisplay.innerText = 'Adventure'; // Display 
+        optionA.style.display = 'flex'; // Show the Adventure option for A
     } else if (value == 1) {
-        optionTBoxes.style.display = 'Travel'; // Show the T-related options (CAR, TRAVEL, etc.)
+        wordDisplay.innerText = 'Travel';
+        optionTBoxes.style.display = 'flex'; // Show the T-related options (CAR, TRAVEL, etc.)
     } else if (value == 2) {
-        optionZ.style.display = 'Zen'; // Show Zen for Z
+        wordDisplay.innerText = 'Zen';
+        optionZ.style.display = 'flex'; // Show Zen for Z
     }
 }
 
 // Initial call to show the correct option when the page loads
-showWord(slider.value);
+showWordAndOptions(slider.value);
 
 // Event listener for slider input changes
 slider.addEventListener('input', function() {
     const letterIndex = this.value;
-    showOption(letterIndex);
+    showWordAndOptions(letterIndex);
 });
 
 const boxCar = document.getElementById('box-car');
