@@ -48,15 +48,49 @@ input[type="range"]::-moz-range-thumb {
     background: black;
 }
 
+/* Marker for A (left side) */
 .slider-container::before {
-    left: 60; /* Marker for A */
+    left: 0; /* Corrected to 0% to place A marker at the left edge */
 }
 
+/* Marker for Z (right side) */
 .slider-container::after {
-    right: 60; /* Marker for Z */
+    right: 0; /* Corrected to 0% to place Z marker at the right edge */
 }
 
+/* Marker for T (center of slider) */
 .slider-container .middle::before {
-    left: 50%; /* Marker for T (middle of slider) */
+    left: 50%; /* Center marker */
     transform: translateX(-50%);
+}
+
+/* Style for the letters below the slider */
+.letters {
+    position: relative;
+    margin-top: 10px;
+}
+
+.letters span {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    bottom: -25px; /* Move the letters up closer to the slider */
+}
+
+/* Position A under the left marker */
+.letters span:first-child {
+    left: 0%; /* Aligns 'A' under the left marker */
+    transform: translateX(0);
+}
+
+/* Position T under the center marker */
+.letters span:nth-child(2) {
+    left: 50%; /* Aligns 'T' at the center */
+    transform: translateX(-50%);
+}
+
+/* Position Z under the right marker */
+.letters span:last-child {
+    left: 100%; /* Aligns 'Z' under the right marker */
+    transform: translateX(-100%);
 }
