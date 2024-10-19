@@ -5,7 +5,7 @@ const letters = ['A', 'T', 'Z'];
 
 // Option boxes for each letter
 const optionA = document.getElementById('option-A');
-const optionT = document.getElementById('option-T');
+const optionTBoxes = document.getElementById('option-T-boxes');
 const optionZ = document.getElementById('option-Z');
 const beautyOptions = document.getElementById('beauty-options');
 
@@ -13,7 +13,7 @@ const beautyOptions = document.getElementById('beauty-options');
 function showOption(value) {
     // Hide all options first
     optionA.style.display = 'none';
-    optionT.style.display = 'none';
+    optionTBoxes.style.display = 'none';
     optionZ.style.display = 'none';
     beautyOptions.style.display = 'none'; // Hide beauty options initially
 
@@ -21,7 +21,7 @@ function showOption(value) {
     if (value == 0) {
         optionA.style.display = 'block';
     } else if (value == 1) {
-        optionT.style.display = 'block';
+        optionTBoxes.style.display = 'flex';
     } else if (value == 2) {
         optionZ.style.display = 'block';
         beautyOptions.style.display = 'block'; // Show the beauty options dropdown for "B"
