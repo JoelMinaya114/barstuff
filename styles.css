@@ -80,7 +80,7 @@ input[type="range"]::-moz-range-thumb {
 /* Position 'A' under the left marker */
 .letters span:first-child {
     left: 0%;                /* Position 'A' near the left marker */
-    transform: translateX(10%); /* Slight adjustment to center it perfectly under the marker */
+    transform: translateX(50%); /* Slight adjustment to center it perfectly under the marker */
 }
 
 /* Position 'T' under the center marker */
@@ -92,5 +92,5 @@ input[type="range"]::-moz-range-thumb {
 /* Position 'Z' under the right marker */
 .letters span:last-child {
     left: 100%;               /* Position 'Z' under the right marker */
-    transform: translateX(-70%); /* Adjust to align 'Z' under the right marker */
+    transform: translateX(-20%); /* Adjust to align 'Z' under the right marker */
 }
