@@ -1,7 +1,7 @@
 /* styles.css */
 .slider-container {
     position: relative;
-    width: 300px; /* The width of the slider */
+    width: 300px; /* Adjust the width if needed */
     margin: 50px auto;
     text-align: center;
 }
@@ -68,8 +68,6 @@ input[type="range"]::-moz-range-thumb {
 .letters {
     position: relative;
     margin-top: 10px;
-    display: flex;
-    justify-content: space-between;
 }
 
 .letters span {
@@ -81,8 +79,8 @@ input[type="range"]::-moz-range-thumb {
 
 /* Position 'A' under the left marker */
 .letters span:first-child {
-    left: 5%;                /* Position 'A' under the left marker */
-    transform: translateX(0); /* No additional offset */
+    left: 0%;                /* Position 'A' near the left marker */
+    transform: translateX(5%); /* Slight adjustment to center it perfectly under the marker */
 }
 
 /* Position 'T' under the center marker */
@@ -93,6 +91,6 @@ input[type="range"]::-moz-range-thumb {
 
 /* Position 'Z' under the right marker */
 .letters span:last-child {
-    left: 95%;               /* Position 'Z' under the right marker */
-    transform: translateX(-100%); /* Adjust to align 'Z' under the right marker */
+    left: 100%;               /* Position 'Z' under the right marker */
+    transform: translateX(-95%); /* Adjust to align 'Z' under the right marker */
 }
