@@ -1,4 +1,5 @@
 const slider = document.getElementById('letterSlider');
+const wordDisplay = document.getElementById('word-display');
 
 // Option boxes for each letter
 const optionA = document.getElementById('option-A');
@@ -14,16 +15,16 @@ function showOption(value) {
 
     // Show the correct option based on slider value
     if (value == 0) {
-        optionA.style.display = 'flex'; // Show the Adventure option for A
+        optionA.style.display = 'Adventure'; // Show the Adventure option for A
     } else if (value == 1) {
-        optionTBoxes.style.display = 'flex'; // Show the T-related options (CAR, TRAVEL, etc.)
+        optionTBoxes.style.display = 'Travel'; // Show the T-related options (CAR, TRAVEL, etc.)
     } else if (value == 2) {
-        optionZ.style.display = 'flex'; // Show Zen for Z
+        optionZ.style.display = 'Zen'; // Show Zen for Z
     }
 }
 
 // Initial call to show the correct option when the page loads
-showOption(slider.value);
+showWord(slider.value);
 
 // Event listener for slider input changes
 slider.addEventListener('input', function() {

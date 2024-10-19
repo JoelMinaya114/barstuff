@@ -1,5 +1,12 @@
 /* styles.css */
 
+.word-display {
+    font-size: 36px; /* Bigger font size */
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px; /* Space between the word and the slider */
+}
+
 /* Parent container to align both slider and letters */
 .slider-wrapper {
     position: relative;
