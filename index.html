@@ -9,9 +9,10 @@
 <body>
 
     <div class="slider-container">
-        <label for="letterSlider">Slide to Select a Letter:</label>
-        <input type="range" id="letterSlider" min="0" max="25" value="0">
-        <span id="selectedLetter">A</span>
+        <!-- The slider element (input range) -->
+        <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
+        <!-- Invisible marker at the middle for "T" -->
+        <span class="middle"></span>
     </div>
 
     <script src="script.js"></script>

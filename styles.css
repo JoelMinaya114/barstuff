@@ -1,5 +1,6 @@
 /* styles.css */
 .slider-container {
+    position: relative;
     width: 300px;
     margin: 50px auto;
     text-align: center;
@@ -14,6 +15,7 @@ input[type="range"] {
     background: #ddd;
     outline: none;
     border-radius: 5px;
+    position: relative;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -33,3 +35,29 @@ input[type="range"]::-moz-range-thumb {
     border-radius: 50%;
     cursor: pointer;
 }
+
+/* Add markers for A, T, Z positions */
+.slider-container::before,
+.slider-container::after,
+.slider-container .middle::before {
+    content: '';
+    position: absolute;
+    top: 12px;
+    height: 25px;
+    width: 2px;
+    background: black;
+}
+
+.slider-container::before {
+    left: 0; /* Marker for A */
+}
+
+.slider-container::after {
+    right: 0; /* Marker for Z */
+}
+
+.slider-container .middle::before {
+    left: 50%; /* Marker for T (middle of slider) */
+    transform: translateX(-50%);
+}
+
