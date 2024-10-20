@@ -19,14 +19,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Show the correct option based on slider value
         if (value == 0) {
-            wordDisplay.innerText = 'Adventure'; // Display 
-            optionA.style.display = 'flex'; // Show the Adventure option for A
+            wordDisplay.innerText = 'Adventure';
+            optionA.style.display = 'flex'; // Show Adventure-related options
         } else if (value == 1) {
             wordDisplay.innerText = 'Travel';
-            optionTBoxes.style.display = 'flex'; // Show the T-related options (CAR, TRAVEL, etc.)
+            optionTBoxes.style.display = 'flex'; // Show Travel-related options (Car, Beauty, Events)
         } else if (value == 2) {
             wordDisplay.innerText = 'Zen';
-            optionZ.style.display = 'flex'; // Show Zen for Z
+            optionZ.style.display = 'flex'; // Show Zen-related options
         }
     }
 
@@ -39,59 +39,50 @@ document.addEventListener('DOMContentLoaded', function() {
         showOption(letterIndex);
     });
 
-    // Get the Travel box
+    // Get the Travel box and handle Travel button click
     const boxTravel = document.getElementById('box-travel');
+    if (boxTravel) {
+        boxTravel.addEventListener('click', function() {
+            document.getElementById('initial-slider').style.display = 'none';
+            travelContent.style.display = 'block';
+        });
+    }
 
-    // Travel button functionality
-    boxTravel.addEventListener('click', function() {
-        // Hide initial slider and options
-        document.getElementById('initial-slider').style.display = 'none';
-        optionA.style.display = 'none';
-        optionTBoxes.style.display = 'none';
-        optionZ.style.display = 'none';
-
-        // Show the Travel-specific content
-        travelContent.style.display = 'block';
-    });
-
-    // Event listener for the Travel slider
-    const travelSlider = document.getElementById('travelSlider'); // Correctly get the travelSlider
+    // Travel slider functionality
+    const travelSlider = document.getElementById('travelSlider');
     if (travelSlider) {
         travelSlider.addEventListener('input', function() {
             const travelIndex = this.value;
-
-            // Word change on top
             if (travelIndex == 0) {
                 document.getElementById('travel-display').innerText = 'Hotels';
             } else if (travelIndex == 1) {
-                document.getElementById('travel-display').innerText = 'Flights'; // Changed from Hotels to Flights
+                document.getElementById('travel-display').innerText = 'Flights';
             } else if (travelIndex == 2) {
                 document.getElementById('travel-display').innerText = 'Restaurants';
             }
         });
     }
 
-    // Get the Car, Beauty, and Sport boxes
+    // Handle Car, Beauty, and Event button clicks
     const boxCar = document.getElementById('box-car');
     const boxBeauty = document.getElementById('box-beauty');
-    const boxSport = document.getElementById('box-sport');
+    const boxEvent = document.getElementById('box-event'); // Updated to match the new name
 
-    // Add functionality to navigate to new pages when clicked
     if (boxCar) {
         boxCar.addEventListener('click', function() {
-            window.location.href = 'car.html'; // Navigate to car.html
+            window.location.href = 'car.html'; // Ensure car.html exists
         });
     }
 
     if (boxBeauty) {
         boxBeauty.addEventListener('click', function() {
-            window.location.href = 'beauty.html'; // Navigate to beauty.html
+            window.location.href = 'beauty.html'; // Ensure beauty.html exists
         });
     }
 
-    if (boxSport) {
-        boxSport.addEventListener('click', function() {
-            window.location.href = 'sport.html'; // Navigate to sport.html
+    if (boxEvent) {
+        boxEvent.addEventListener('click', function() {
+            window.location.href = 'event.html'; // Ensure event.html exists
         });
     }
 });
