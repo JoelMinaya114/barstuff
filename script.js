@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // Event listener for the Travel slider
-    const travelSlider = document.getElementById('travelSlider');
+    const travelSlider = document.getElementById('travelSlider'); // Correctly get the travelSlider
     if (travelSlider) {
         travelSlider.addEventListener('input', function() {
             const travelIndex = this.value;
