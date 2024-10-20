@@ -8,42 +8,45 @@
 </head>
 <body>
 
-<!-- Word Display above the slider -->
-<div class="slider-wrapper">
-    <div id="word-display" class="word-display">Adventure</div>
-
-    <!-- Slider and Letters -->
-    <div class="slider-container">
-        <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
-        <span class="middle"></span>
+    <div id="initial-slider">
+        <!-- Word Display above the slider -->
+        <div class="slider-wrapper">
+            <div id="word-display" class="word-display">Adventure</div>
+    
+            <!-- Slider and Letters -->
+            <div class="slider-container">
+                <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
+                <span class="middle"></span>
+            </div>
+            
+            <!-- The letters A, T, Z below the slider -->
+            <div class="letters">
+                <span>A</span>
+                <span>T</span>
+                <span>Z</span>
+            </div>
+        </div>
+    
+        <!-- Option Boxes for A -->
+        <div id="option-A" class="options" style="display: flex;">
+            <div id="box-explore" class="option-box">Explore</div>
+            <div id="box-discover" class="option-box">Discover</div>
+        </div>
+    
+        <!-- Option Boxes for T -->
+        <div id="option-T-boxes" class="options" style="display: none;">
+            <div id="box-car" class="option-box">Car</div>
+            <div id="box-beauty" class="option-box">Beauty</div>
+            <div id="box-sport" class="option-box">Sport</div>
+        </div>
+    
+        <!-- Option Boxes for Z -->
+        <div id="option-Z" class="options" style="display: none;">
+            <div id="box-relax" class="option-box">Relax</div>
+            <div id="box-wellness" class="option-box">Wellness</div>
+        </div>
     </div>
     
-    <!-- The letters A, T, Z below the slider -->
-    <div class="letters">
-        <span>A</span>
-        <span>T</span>
-        <span>Z</span>
-    </div>
-</div>
-
-<!-- Option Boxes for A -->
-<div id="option-A" class="options" style="display: flex;">
-    <div id="box-explore" class="option-box">Explore</div>
-    <div id="box-discover" class="option-box">Discover</div>
-</div>
-
-<!-- Option Boxes for T -->
-<div id="option-T-boxes" class="options" style="display: none;">
-    <div id="box-car" class="option-box">Car</div>
-    <div id="box-beauty" class="option-box">Beauty</div>
-    <div id="box-sport" class="option-box">Sport</div>
-</div>
-
-<!-- Option Boxes for Z -->
-<div id="option-Z" class="options" style="display: none;">
-    <div id="box-relax" class="option-box">Relax</div>
-    <div id="box-wellness" class="option-box">Wellness</div>
-</div>
 
 <!-- New Content for Travel (Initially hidden) -->
 <div class="travel-content" id="travel-content" style="display: none;">
