@@ -3,58 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slide to Letter</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Slider to Letter</title>
+    <!-- Update the path to the CSS file to reflect the new folder structure -->
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        #slider-container {
+            position: relative;
+            width: 80%;
+            margin: 50px auto;
+        }
+        #letter-slider {
+            width: 100%;
+        }
+        #letters {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 10px;
+        }
+        .letter {
+            position: relative;
+            transform: translateY(10px); /* Move letters down slightly */
+        }
+        #boxes-container {
+            display: none; /* Initially hide the boxes */
+            justify-content: space-around;
+            flex-wrap: wrap;
+            width: 60%;
+            margin: 30px auto;
+            gap: 10px;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            border: 2px solid #007bff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .box:hover {
+            background-color: #007bff;
+            color: white;
+        }
+        .hidden {
+            visibility: hidden;
+        }
+        #selected-title {
+            margin-top: 20px;
+            font-size: 2em;
+        }
+    </style>
 </head>
 <body>
-
-<!-- Word Display above the slider -->
-<div class="slider-wrapper">
-    <div id="word-display" class="word-display">Adventure</div>
-
-    <!-- Slider and Letters -->
-    <div class="slider-container">
-        <input type="range" id="letterSlider" min="0" max="2" step="1" value="0">
-        <span class="middle"></span>
-    </div>
-    
-    <!-- The letters A, T, Z below the slider -->
-    <div class="letters">
-        <span>A</span>
-        <span>T</span>
-        <span>Z</span>
-    </div>
-</div>
-
-<!-- Option Boxes for A -->
-<div id="option-A" class="options" style="display: flex;">
-    <div id="box-explore" class="option-box">Explore</div>
-    <div id="box-adventure" class="option-box">Adventure</div>
-</div>
-
-<!-- Option Boxes for T -->
-<div id="option-T-boxes" class="options" style="display: none;">
-    <div id="box-car" class="option-box">CAR</div>
-    <div id="box-travel" class="option-box">TRAVEL</div>
-    <div id="box-beauty" class="option-box">BEAUTY</div>
-    <div id="box-sport" class="option-box">SPORT</div>
-</div>
-
-<!-- Option Boxes for Z -->
-<div id="option-Z" class="options" style="display: none;">
-    <div id="box-relax" class="option-box">Relax</div>
-    <div id="box-wellness" class="option-box">Wellness</div>
-</div>
-
-
-    <!-- Beauty-related options (SALONS, etc.) -->
-    <div id="beauty-options" class="options" style="display: none;">
-        <div id="box-salons" class="option-box">SALONS</div>
-        <div id="box-barbershops" class="option-box">BARBERSHOPS</div>
-        <div id="box-lashes" class="option-box">LASHES</div>
-        <div id="box-spa" class="option-box">SPA</div>
+    <div id="slider-container">
+        <input type="range" min="0" max="2" value="0" id="letter-slider">
+        <div id="letters">
+            <span class="letter">A</span>
+            <span class="letter">T</span>
+            <span class="letter">Z</span>
+        </div>
     </div>
 
-    <script src="script.js"></script> <!-- Link to external JS file -->
+    <div id="boxes-container">
+        <!-- Creating 12 boxes with some blank -->
+        <div id="option-A" class="box">Adventure</div>
+        <div id="option-T-boxes" class="box">Travel</div>
+        <div id="option-T-boxes" class="box">Car</div>
+        <div id="option-T-boxes" class="box">Beauty</div>
+        <div id="option-T-boxes" class="box">Sport</div>
+        <div id="option-Z" class="box">Zen</div>
+        <div class="box"></div>
+        <div class="box">Leisure</div>
+        <div class="box">Music</div>
+        <div class="box"></div>
+        <div class="box">Fitness</div>
+        <div class="box">Dining</div>
+    </div>
+
+    <div id="selected-title" class="hidden"></div>
+
+    <!-- Update the path to the JavaScript file to reflect the new folder structure -->
+    <script src="js/script.js"></script>
 </body>
 </html>
