@@ -18,6 +18,15 @@ export default {
     this.socket.onopen = () => {
       console.log("WebSocket connection established");
     };
+    this.socket.onerror = (error) => {
+      console.error("WebSocket error observed:", error);
+      // Handle the error appropriately, e.g., retry connection, show a message, etc.
+    };
+
+    this.socket.onclose = (event) => {
+      console.log("WebSocket connection closed:", event);
+      // Optionally, you can attempt to reconnect or notify the user
+    };
   },
 };
 </script>
